@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 113bcaf0e29eedc4d994120fcb7d8255
-timeCreated: 1493590399
+timeCreated: 1494269306
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -110,12 +110,12 @@ TextureImporter:
       name: wizard_1_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 187
-        width: 30
-        height: 44
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -125,10 +125,10 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 187
-        width: 27
-        height: 46
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -136,12 +136,12 @@ TextureImporter:
       name: wizard_1_2
       rect:
         serializedVersion: 2
-        x: 159
+        x: 160
         y: 187
-        width: 27
-        height: 46
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -149,12 +149,12 @@ TextureImporter:
       name: wizard_1_3
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 187
-        width: 27
-        height: 46
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -162,12 +162,12 @@ TextureImporter:
       name: wizard_1_4
       rect:
         serializedVersion: 2
-        x: 222
-        y: 187
-        width: 27
-        height: 45
+        x: 0
+        y: 140
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -175,12 +175,12 @@ TextureImporter:
       name: wizard_1_5
       rect:
         serializedVersion: 2
-        x: 1
+        x: 32
         y: 140
-        width: 28
-        height: 42
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -188,12 +188,12 @@ TextureImporter:
       name: wizard_1_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 140
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -201,12 +201,12 @@ TextureImporter:
       name: wizard_1_7
       rect:
         serializedVersion: 2
-        x: 63
+        x: 96
         y: 140
-        width: 28
-        height: 42
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -214,12 +214,12 @@ TextureImporter:
       name: wizard_1_8
       rect:
         serializedVersion: 2
-        x: 94
+        x: 128
         y: 140
-        width: 28
-        height: 42
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -227,12 +227,12 @@ TextureImporter:
       name: wizard_1_9
       rect:
         serializedVersion: 2
-        x: 126
+        x: 160
         y: 140
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -240,12 +240,12 @@ TextureImporter:
       name: wizard_1_10
       rect:
         serializedVersion: 2
-        x: 157
+        x: 192
         y: 140
-        width: 28
-        height: 42
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -253,12 +253,12 @@ TextureImporter:
       name: wizard_1_11
       rect:
         serializedVersion: 2
-        x: 188
-        y: 140
-        width: 28
-        height: 42
+        x: 0
+        y: 93
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -266,12 +266,12 @@ TextureImporter:
       name: wizard_1_12
       rect:
         serializedVersion: 2
-        x: 219
-        y: 140
-        width: 29
-        height: 42
+        x: 32
+        y: 93
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -279,12 +279,12 @@ TextureImporter:
       name: wizard_1_13
       rect:
         serializedVersion: 2
-        x: 3
+        x: 64
         y: 93
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -292,12 +292,12 @@ TextureImporter:
       name: wizard_1_14
       rect:
         serializedVersion: 2
-        x: 34
-        y: 94
-        width: 28
-        height: 41
+        x: 96
+        y: 93
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -305,12 +305,12 @@ TextureImporter:
       name: wizard_1_15
       rect:
         serializedVersion: 2
-        x: 65
+        x: 128
         y: 93
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -318,12 +318,12 @@ TextureImporter:
       name: wizard_1_16
       rect:
         serializedVersion: 2
-        x: 96
-        y: 94
-        width: 28
-        height: 42
+        x: 160
+        y: 93
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -331,12 +331,12 @@ TextureImporter:
       name: wizard_1_17
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 93
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -344,12 +344,12 @@ TextureImporter:
       name: wizard_1_18
       rect:
         serializedVersion: 2
-        x: 159
-        y: 93
-        width: 28
-        height: 42
+        x: 0
+        y: 46
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -357,12 +357,12 @@ TextureImporter:
       name: wizard_1_19
       rect:
         serializedVersion: 2
-        x: 190
-        y: 93
-        width: 28
-        height: 43
+        x: 32
+        y: 46
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -370,12 +370,12 @@ TextureImporter:
       name: wizard_1_20
       rect:
         serializedVersion: 2
-        x: 221
-        y: 93
-        width: 29
-        height: 43
+        x: 64
+        y: 46
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -383,12 +383,12 @@ TextureImporter:
       name: wizard_1_21
       rect:
         serializedVersion: 2
-        x: 1
+        x: 96
         y: 46
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -396,12 +396,12 @@ TextureImporter:
       name: wizard_1_22
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 46
-        width: 28
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -409,12 +409,12 @@ TextureImporter:
       name: wizard_1_23
       rect:
         serializedVersion: 2
-        x: 63
+        x: 160
         y: 46
-        width: 29
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -422,168 +422,12 @@ TextureImporter:
       name: wizard_1_24
       rect:
         serializedVersion: 2
-        x: 94
+        x: 192
         y: 46
-        width: 29
-        height: 43
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_25
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 46
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_26
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 46
-        width: 29
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_27
-      rect:
-        serializedVersion: 2
-        x: 190
-        y: 46
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_28
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 46
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_29
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_30
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_31
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 2
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_32
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 0
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_33
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_34
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 0
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_35
-      rect:
-        serializedVersion: 2
-        x: 190
-        y: 2
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wizard_1_36
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 0
-        width: 28
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
