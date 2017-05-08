@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MagicBallController.cs" />
+     <Compile Include="Assets\MagicalBallLifeTime.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Magic\Magic.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
