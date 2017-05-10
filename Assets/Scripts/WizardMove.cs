@@ -46,7 +46,7 @@ public class WizardMove : MonoBehaviour {
 
 	void SaySpell(){
 		if (Time.time > nextFire) {
-			nextFire = Time.time + nextFire;
+			nextFire = Time.time + spellRate;
 			if (facingRight) {
 				Instantiate (spell, staff.position, Quaternion.Euler (0, 0, 0));
 			} else if (!facingRight) {
