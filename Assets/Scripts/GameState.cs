@@ -6,6 +6,6 @@ using UnityEngine;
 /// </summary>
 public static class GameState {
 
-    public static HeroClass Player = new HeroClass("Саня", false, races.орк, 99, 100);
+    public static WizardClass Player = new WizardClass("Саня", false, races.орк, 99, 100, 70, 100);
     
 }

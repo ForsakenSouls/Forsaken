@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HeroClass : ScriptableObject, IComparable
 {
-    static int main_ID { get; set; }
-    int ID { get; set; }
+    protected static int main_ID { get; set; }
+    protected int ID { get; set; }
     public string Name { get; set; }
     public bool gender { get; set; }
     public races race { get; set; }
