@@ -8,7 +8,7 @@ public class MagicBallController : MonoBehaviour {
 	public float rocketSpeed;
 	Rigidbody2D myRB;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		myRB = GetComponent <Rigidbody2D> ();
 		if(transform.localRotation.z > 0)
 			myRB.AddForce ( new Vector2(-1, 0) * rocketSpeed, ForceMode2D.Impulse);
@@ -19,5 +19,12 @@ public class MagicBallController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void removeBall()
+	{
+		myRB.velocity = new Vector2 (0, 0);
+
+
 	}
 }

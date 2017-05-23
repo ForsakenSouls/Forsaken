@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Magic\Magic.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicBallController.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicalBallLifeTime.cs" />
+     <Compile Include="Assets\Scripts\MagicBallHit.cs" />
      <Compile Include="Assets\Scripts\WizardClass.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
      <Compile Include="Assets\Scripts\enums.cs" />
