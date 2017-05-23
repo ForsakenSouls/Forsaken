@@ -10,7 +10,7 @@ public class WizardMove : MonoBehaviour {
 	Animator myAnim;
 	bool facingRight;
 
-	//conjure
+	//маг
 	public Transform staff;
 	public GameObject spell;
 	private float spellRate = 0.5f;
@@ -27,7 +27,8 @@ public class WizardMove : MonoBehaviour {
 	void Update()
 	{
 		//conjuring
-		if (Input.GetAxisRaw ("Fire1") > 0)
+		//if (Input.GetAxisRaw ("Fire1") > 0)
+		if(Input.GetKeyDown(KeyCode.Space))
 			SaySpell ();
 		
 	}
