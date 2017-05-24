@@ -1,2 +1,2 @@
 # Forsaken
-First game 2d
+Especially for Sasha Valay
