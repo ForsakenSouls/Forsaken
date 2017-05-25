@@ -10,7 +10,8 @@ public class Inventory : MonoBehaviour
     List<Item> list;
     public GameObject inventory;
     public GameObject container;
-
+    public GameObject info;
+    private GUIStyle guistyle = new GUIStyle();
     // Use this for initialization
 
     void Start()
@@ -19,6 +20,15 @@ public class Inventory : MonoBehaviour
     }
 
     // Update is called once per frame
+    void OnGUI()
+    {
+        if (info.activeSelf)
+        {
+            guistyle.fontSize = 16;
+            GUI.Label(new Rect(507, 43, 150, 200), GameState.Player.ToString(), guistyle);
+        }
+    }
+
     void Update()
     {
 
@@ -78,9 +88,15 @@ public class Inventory : MonoBehaviour
                 inventory.SetActive(true);
             }
         }
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            if (info.activeSelf)
+                info.SetActive(false);
+            else
+                info.SetActive(true);
+        }
 
     }
-
 
     void remove(Item it, GameObject obj)
     {
