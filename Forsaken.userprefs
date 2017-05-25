@@ -1,13 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MagicBallHit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyState.cs">
     <Files>
-      <File FileName="Assets\Scripts\WizardMove.cs" Line="30" Column="19" />
-      <File FileName="Assets\Scripts\Inventory.cs" Line="13" Column="2" />
-      <File FileName="Assets\Scripts\Magic\Magic.cs" Line="7" Column="31" />
-      <File FileName="Assets\Scripts\Magic\MagicalBallLifeTime.cs" Line="4" Column="1" />
-      <File FileName="Assets\Scripts\Magic\MagicBallController.cs" Line="10" Column="28" />
-      <File FileName="Assets\Scripts\MagicBallHit.cs" Line="15" Column="22" />
+      <File FileName="Assets\Scripts\WizardMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Magic\Magic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Magic\MagicalBallLifeTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Magic\MagicBallController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MagicBallHit.cs" Line="31" Column="1" />
+      <File FileName="Assets\Scripts\GameState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HeroClass.cs" Line="29" Column="59" />
+      <File FileName="Assets\Scripts\EnemyState.cs" Line="23" Column="21" />
+      <File FileName="Assets\Scripts\WizardClass.cs" Line="7" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

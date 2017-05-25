@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagicBallHit : MonoBehaviour {
 
 	// Use this for initialization
-	float Damage;
+	public int ballDamage;
 	float ManaCost;
 
 	MagicBallController myPC;
@@ -20,11 +20,16 @@ public class MagicBallHit : MonoBehaviour {
 		
 	}
 
+	//при встрече с объектом взрывается
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.layer == LayerMask.NameToLayer ("Shootable")) {
 			myPC.removeBall ();
 			Destroy (gameObject);
+			if (other.tag == "Enemy") {
+				EnemyState hurtEnemy = other.gameObject.GetComponent<EnemyState> ();
+				hurtEnemy.addDamage (ballDamage);
+			}
 		}
 		
 		

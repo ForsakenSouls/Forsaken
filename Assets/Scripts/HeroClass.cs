@@ -12,12 +12,12 @@ public class HeroClass : ScriptableObject, IComparable
     public states state { get; set; }
     public bool abil_to_speak { get; set; }
     public bool abil_to_move { get; set; }
-    public uint age { get; set; }
-    public uint health { get; set; }
-    public uint MAX_HEALTH { get; set; }
-    public uint EXP { get; set; }
+    public int age { get; set; }
+    public int health { get; set; }
+    public int MAX_HEALTH { get; set; }
+    public int EXP { get; set; }
 
-    public HeroClass(string _name = "Fedor", bool _gender = false, races _race = races.человек, uint m_health = 100)
+    public HeroClass(string _name = "Fedor", bool _gender = false, races _race = races.человек, int m_health = 100)
     {
         ID = ++main_ID;
         Name = _name;
@@ -26,7 +26,7 @@ public class HeroClass : ScriptableObject, IComparable
         MAX_HEALTH = m_health;
         health = MAX_HEALTH / 5;
     }
-    public HeroClass(string _name, bool gend, races _race, uint _health, uint mhealth) {
+    public HeroClass(string _name, bool gend, races _race, int _health, int mhealth) {
         ID = ++main_ID;
         Name = _name;
         gender = gend;

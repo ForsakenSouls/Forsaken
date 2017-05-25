@@ -7,5 +7,4 @@ using UnityEngine;
 public static class GameState {
 
     public static WizardClass Player = new WizardClass("Саня", false, races.орк, 99, 100, 99, 100);
-    
 }
