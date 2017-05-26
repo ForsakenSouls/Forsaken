@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\GameState.cs" />
      <Compile Include="Assets\Scripts\HeroClass.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Scripts\ItAmount.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Magic\Magic.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicBallController.cs" />

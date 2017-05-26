@@ -7,13 +7,16 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
 
-    List<Item> list;
+    public List<Item> list;
     public GameObject inventory;
+    public GameObject equip;
     public GameObject container;
     public GameObject info;
+    public GameObject weapon_equipment;
     private GUIStyle guistyle = new GUIStyle();
+    int[] arts = { 0, 0, 0, 0, 0, 0 }; //{stuff, teeth, , , , }
     // Use this for initialization
-
+    int weap_next = 0;
     void Start()
     {
         list = new List<Item>();
@@ -45,8 +48,11 @@ public class Inventory : MonoBehaviour
                     item = hit.collider.GetComponent<Item>();
                     if (item != null)
                     {
+                        if (arts[item.art_code] == 0)
+                            list.Add(item);
 
-                        list.Add(item);
+                        arts[item.art_code]++;
+                        
                         Destroy(hit.collider.gameObject);
                     }
                 }
@@ -88,6 +94,7 @@ public class Inventory : MonoBehaviour
                 inventory.SetActive(true);
             }
         }
+        //// активация инвентаря
         if (Input.GetKeyUp(KeyCode.L))
         {
             if (info.activeSelf)
@@ -96,13 +103,47 @@ public class Inventory : MonoBehaviour
                 info.SetActive(true);
         }
 
+        //// экипировка оружия
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            weapon_equip();
+        }
+
     }
 
     void remove(Item it, GameObject obj)
     {
         GameObject newo = Instantiate<GameObject>(Resources.Load<GameObject>(it.prefab));
         newo.transform.position = transform.position + 3 * transform.right;
-        Destroy(obj);
-        list.Remove(it);
+        if (arts[it.art_code] == 1)
+        {
+            Destroy(obj);
+            if (it == list[weap_next - 1] || list.Count == 1)
+                weapon_equip();
+            list.Remove(it);    
+        }
+        arts[it.art_code]--;
+       
+    }
+    void weapon_equip()
+    {
+        weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
+        for (int i = weap_next; i < list.Count; i++)
+        {
+
+            Item itw = list[i];
+            if (itw.type == "Weapon")
+            {
+                
+                    weapon_equipment.transform.SetParent(equip.transform.GetChild(0).transform, false);
+                    weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>(itw.sprite);
+                    weap_next = i + 1;
+                    if (weap_next == list.Count)
+                    {
+                        weap_next = 0;
+                    }
+                    break;
+            }
+        }
     }
 }
