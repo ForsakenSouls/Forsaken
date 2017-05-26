@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MagicBallController : MonoBehaviour {
 
-
+	// скорость магического шара
 	public float rocketSpeed;
+	// шар
 	Rigidbody2D myRB;
-	// Use this for initialization
+	// выстрел
 	void Awake () {
 		myRB = GetComponent <Rigidbody2D> ();
 		if(transform.localRotation.z > 0)
@@ -21,6 +22,7 @@ public class MagicBallController : MonoBehaviour {
 		
 	}
 
+	// удаление шара
 	public void removeBall()
 	{
 		myRB.velocity = new Vector2 (0, 0);

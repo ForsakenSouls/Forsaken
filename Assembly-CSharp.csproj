@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\MagicBallHit.cs" />
      <Compile Include="Assets\Scripts\WizardClass.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
+     <Compile Include="Assets\Scripts\enemyDamage.cs" />
      <Compile Include="Assets\Scripts\enums.cs" />
      <Compile Include="Assets\Scripts\health_script.cs" />
      <Compile Include="Assets\Scripts\mana_script.cs" />

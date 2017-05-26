@@ -9,7 +9,7 @@ public class EnemyState : MonoBehaviour {
 	public int currentHealth;
 	// Use this for initialization
 	void Start () {
-		AI = new WizardClass("Саня", false, races.орк, 99, 100, 99, 100);
+		AI = new WizardClass("Димас", false, races.орк, 99, 100, 99, 100);
 	}
 	
 	// Update is called once per frame
