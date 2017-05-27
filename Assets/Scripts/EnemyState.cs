@@ -7,6 +7,7 @@ public class EnemyState : MonoBehaviour {
 	//Наш ai
 	HeroClass AI;
 	public int currentHealth;
+	public GameObject explosion;
 	// Use this for initialization
 	void Start () {
 		AI = new WizardClass("Димас", false, races.орк, 99, 100, 99, 100);
@@ -26,6 +27,7 @@ public class EnemyState : MonoBehaviour {
 
 	public void MakeDead()
 	{
+		Instantiate (explosion, transform.position, transform.rotation);
 		Destroy (gameObject);
 	}
 }
