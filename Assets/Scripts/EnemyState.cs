@@ -10,7 +10,7 @@ public class EnemyState : MonoBehaviour {
 	public GameObject explosion;
 	// Use this for initialization
 	void Start () {
-		AI = new WizardClass("Димас", false, races.орк, 99, 100, 99, 100);
+		AI = new WizardClass("Димас", false, races.орк, 99, 100, 99, 100, 30);
 	}
 	
 	// Update is called once per frame

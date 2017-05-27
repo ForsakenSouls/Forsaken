@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour {
     public void StartGame() {
-        SceneManager.LoadScene("changes");
+        SceneManager.LoadScene("SelectionScene");
     }
 
     public void ExitGame() {

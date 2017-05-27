@@ -24,15 +24,18 @@ public class HeroClass : ScriptableObject, IComparable
         gender = _gender;
         race = _race;
         MAX_HEALTH = m_health;
-        health = MAX_HEALTH / 5;
+        health = MAX_HEALTH;
     }
-    public HeroClass(string _name, bool gend, races _race, int _health, int mhealth) {
+    public HeroClass(string _name, bool gend, races _race, int _health, int mhealth, int _age) {
         ID = ++main_ID;
         Name = _name;
         gender = gend;
         race = _race;
         MAX_HEALTH = mhealth;
         health = _health;
+        abil_to_move = true;
+        abil_to_speak = true;
+        age = _age;
     }
     /// <summary>
     /// Реализация интерфейса IComparable
@@ -52,7 +55,7 @@ public class HeroClass : ScriptableObject, IComparable
     }
     public override string ToString()
     {
-        return string.Format("ID персонажа - {0},\nИмя персонажа - {1},\nпол - {2},\nраса - {3},\nтекущее состояние - {4},\nвозможность двигаться - {5},\nвозможность разговаривать - {6},\nвозраст - {7},\nздоровье - {8},\nопыт - {9}", ID, name, gender, race, state, abil_to_move, abil_to_speak, age, health, EXP);
+        return string.Format("ID персонажа - {0},\nИмя персонажа - {1},\nпол - {2},\nраса - {3},\nтекущее состояние - {4},\nвозможность двигаться - {5},\nвозможность разговаривать - {6},\nвозраст - {7},\nздоровье - {8},\nопыт - {9}", ID, Name, (gender)?"Мужской":"Женский", race, state, (abil_to_move)?"да":"нет", (abil_to_speak)?"да":"нет", age, health, EXP);
     }
     void Refresh()
     {
