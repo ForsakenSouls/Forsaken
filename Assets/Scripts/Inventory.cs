@@ -13,11 +13,13 @@ public class Inventory : MonoBehaviour
     public GameObject container;
     public GameObject info;
     public GameObject weapon_equipment;
+    public GameObject potion_equipment;
+
     private GUIStyle guistyle = new GUIStyle();
-    string current_am = "";
-    int[] arts = { 0, 0, 0, 0, 0, 0 }; //{stuff, teeth, , , , } 
+    int[] arts = { 0, 0, 0, 0, 0, 0 }; //{stuff, teeth, healthpotion ,manapotion , , } 
                                        // Use this for initialization 
     int weap_next = 0;
+    int pot_next = 0;
     void Start()
     {
         list = new List<Item>();
@@ -45,6 +47,11 @@ public class Inventory : MonoBehaviour
                 weapon_equip();
                 weap_next++;
             }
+            if(potion_equipment.GetComponent<Image>().sprite == Resources.Load<Sprite>("Equip/EmptyCell"))
+            {
+               Potion_equip();
+               pot_next++;
+            }
         }
         if (Input.GetKeyUp(KeyCode.I)) //// активация(и вместе с тем заполнение) инвентаря 
             LayArts();
@@ -62,6 +69,10 @@ public class Inventory : MonoBehaviour
         {
             weapon_equip();
         }
+        if (Input.GetKeyUp(KeyCode.O)) //// экипировка зелий
+        {
+            Potion_equip();
+        }
 
     }
 
@@ -78,37 +89,27 @@ public class Inventory : MonoBehaviour
                 // weapon_equip(); 
             }
             list.Remove(it);
-            weap_next = 0;
-            weapon_equip();
-
+            if (it.type == "Weapon")
+            {
+                weap_next = 0;
+                weapon_equip();
+            }
+            else
+            {
+                pot_next = 0;
+                Potion_equip();
+            }
         }
         arts[it.art_code]--;
         if (list.Count == 0)
-            weapon_equip();
-    }
-    void weapon_equip()
-    {
-
-        weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
-
-        for (int i = weap_next; i < list.Count; i++)
         {
-
-            Item itw = list[i];
-            if (itw.type == "Weapon")
-            {
-
-                weapon_equipment.transform.SetParent(equip.transform.GetChild(0).transform, false);
-                weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>(itw.sprite);
-                weap_next = i + 1;
-                if (weap_next == list.Count)
-                {
-                    weap_next = 0;
-                }
-                break;
-            }
+            if (it.type == "Weapon")
+                weapon_equip();
+            else
+                Potion_equip();
         }
     }
+    
     void GetDrop()
     {
         if (list.Count != 16 && !inventory.activeSelf)
@@ -170,7 +171,53 @@ public class Inventory : MonoBehaviour
             inventory.SetActive(true);
         }
     }
+    void Potion_equip()
+    {
+       potion_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
+        if (pot_next >= list.Count - 1)
+            pot_next = 0;
+        for (int i = pot_next; i < list.Count; i++)
+        {
 
+            Item itp = list[i];
+            if (itp.type == "Potion")
+            {
 
+                potion_equipment.transform.SetParent(equip.transform.GetChild(1).transform, false);
+                potion_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>(itp.sprite);
+                pot_next ++;
+                if (weap_next >= list.Count)
+                    weap_next = 0;
+                break;
+            }
+            else
+                pot_next++;
+        }
+    }
 
+    void weapon_equip()
+    {
+
+        weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
+        if (weap_next >= list.Count - 1)
+            weap_next = 0;
+        for (int i = weap_next; i < list.Count; i++)
+        {
+
+            Item itw = list[i];
+            if (itw.type == "Weapon")
+            {
+
+                weapon_equipment.transform.SetParent(equip.transform.GetChild(0).transform, false);
+                weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>(itw.sprite);
+                weap_next ++;
+                if (weap_next >= list.Count)
+                    weap_next = 0;
+                break;
+            }
+            else
+                weap_next++;
+
+        }
+    }
 }

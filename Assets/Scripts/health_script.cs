@@ -15,7 +15,7 @@ public class health_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		health_slider.value = (float)GameState.Player.health / GameState.Player.MAX_HEALTH;
+		//health_slider.value = (float)GameState.Player.health / GameState.Player.MAX_HEALTH;
     }
 
 	public void addDamage(int damage) {
