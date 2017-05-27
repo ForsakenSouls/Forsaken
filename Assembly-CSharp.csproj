@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyState.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />
      <Compile Include="Assets\Scripts\HeroClass.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Scripts\Magic\MagicBallController.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicalBallLifeTime.cs" />
      <Compile Include="Assets\Scripts\MagicBallHit.cs" />
+     <Compile Include="Assets\Scripts\MenuButtons.cs" />
      <Compile Include="Assets\Scripts\WizardClass.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
      <Compile Include="Assets\Scripts\enemyDamage.cs" />

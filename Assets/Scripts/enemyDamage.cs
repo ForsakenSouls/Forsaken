@@ -9,9 +9,11 @@ public class enemyDamage : MonoBehaviour {
 	public int pushBackForce;
 
 	float nextDamage;
+	float delayTime;
 	// Use this for initialization
 	void Start () {
 		nextDamage = 0f;
+		delayTime = 1f;
 	}
 	
 	// Update is called once per frame
@@ -19,14 +21,18 @@ public class enemyDamage : MonoBehaviour {
 		
 	}
 
-	void onTriggerStay2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.tag == "Player") {
+			GameState.Player.health -= damage;
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other)
 	{
 		if (other.tag == "Player" && nextDamage < Time.time) {
-			health_script health = GetComponent<health_script> ();
-			health.addDamage (damage);
-			nextDamage = Time.time + damageRate;
-
-			pushBack (other.transform);
+			nextDamage = Time.time + delayTime;
+			GameState.Player.health -= damage;
 		}
 	}
 
