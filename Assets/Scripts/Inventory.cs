@@ -14,7 +14,8 @@ public class Inventory : MonoBehaviour
     public GameObject info;
     public GameObject weapon_equipment;
     public GameObject potion_equipment;
-
+	int weap_amount = 0;
+	int pot_amount = 0;
     private GUIStyle guistyle = new GUIStyle();
     int[] arts = { 0, 0, 0, 0, 0, 0 }; //{stuff, teeth, healthpotion ,manapotion , , } 
                                        // Use this for initialization 
@@ -93,11 +94,13 @@ public class Inventory : MonoBehaviour
             {
                 weap_next = 0;
                 weapon_equip();
+				weap_amount--;
             }
             else
             {
                 pot_next = 0;
                 Potion_equip();
+				pot_amount--;
             }
         }
         arts[it.art_code]--;
@@ -130,7 +133,12 @@ public class Inventory : MonoBehaviour
 
                     Destroy(hit.collider.gameObject);
                 }
+				if (item.type == "Weapon")
+					weap_amount++;
+				else
+					pot_amount++;
             }
+
         }
     }
     void LayArts()
@@ -173,8 +181,10 @@ public class Inventory : MonoBehaviour
     }
     void Potion_equip()
     {
-       potion_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
-        if (pot_next >= list.Count - 1)
+		if (pot_amount == 0) {
+			potion_equipment.GetComponent<Image> ().sprite = Resources.Load<Sprite> ("Equip/EmptyCell");
+		}
+		if (pot_next >= list.Count)
             pot_next = 0;
         for (int i = pot_next; i < list.Count; i++)
         {
@@ -197,9 +207,10 @@ public class Inventory : MonoBehaviour
 
     void weapon_equip()
     {
-
-        weapon_equipment.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
-        if (weap_next >= list.Count - 1)
+		if (weap_amount == 0) {
+			weapon_equipment.GetComponent<Image> ().sprite = Resources.Load<Sprite> ("Equip/EmptyCell");
+		}
+        if (weap_next >= list.Count)
             weap_next = 0;
         for (int i = weap_next; i < list.Count; i++)
         {
