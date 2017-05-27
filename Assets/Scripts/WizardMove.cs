@@ -35,6 +35,10 @@ public class WizardMove : MonoBehaviour {
 
 	// Update is called once per second
 	void FixedUpdate () {
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			
+			GameState.Invaluable = !GameState.Invaluable;
+		}
 		float move = Input.GetAxis ("Horizontal");		
 		myRB.velocity = new  Vector2 (move * maxSpeed, myRB.velocity.y);
 		myAnim.SetFloat ("speed", Mathf.Abs (move));

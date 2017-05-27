@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\MagicBallHit.cs" />
      <Compile Include="Assets\Scripts\MenuButtons.cs" />
      <Compile Include="Assets\Scripts\Selectionscript.cs" />
+     <Compile Include="Assets\Scripts\ShieldActive.cs" />
      <Compile Include="Assets\Scripts\WizardClass.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
      <Compile Include="Assets\Scripts\enemyDamage.cs" />

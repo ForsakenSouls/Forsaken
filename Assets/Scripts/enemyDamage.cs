@@ -23,14 +23,14 @@ public class enemyDamage : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && !GameState.Invaluable) {
 			GameState.Player.health -= damage;
 		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
 	{
-		if (other.tag == "Player" && nextDamage < Time.time) {
+		if (other.tag == "Player" && nextDamage < Time.time && !GameState.Invaluable) {
 			nextDamage = Time.time + delayTime;
 			GameState.Player.health -= damage;
 		}
