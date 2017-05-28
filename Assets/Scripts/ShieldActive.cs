@@ -17,4 +17,9 @@ public class ShieldActive : MonoBehaviour {
 		else
 			Shield.SetActive (false);
 	}
+	void FixedUpdate()
+	{
+		if (GameState.Invaluable)
+			GameState.Player.mana -= GameState.manaPerTime;
+	}
 }
