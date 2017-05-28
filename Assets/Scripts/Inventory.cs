@@ -73,10 +73,28 @@ public class Inventory : MonoBehaviour
 
 			shield.transform.SetParent(equip.transform.GetChild(2).transform, false);
 		}       
-
+		if (Input.GetKeyUp (KeyCode.E))
+		{
+			if (GameState.ArtID > 3) 
+			{
+				for (int i = 0; i < list.Count; i++)
+					if (list [i].art_code == GameState.ArtID) 
+					{
+						if (arts [list [i].art_code] == 1)
+						{
+							list.Remove (list [i]);
+							weapon_equip ();
+						} 
+						else
+							arts [list [i].art_code]--;
+						break;
+					}
+			}
+		}
+			
 	}
 
-	void remove(Item it, GameObject obj)
+	public void remove(Item it, GameObject obj)
 	{
 		GameObject newo = Instantiate<GameObject>(Resources.Load<GameObject>(it.prefab));
 		newo.transform.position = transform.position - 3 * transform.right;

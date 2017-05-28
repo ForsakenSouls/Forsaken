@@ -53,7 +53,7 @@
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\ItAmount.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
-     <Compile Include="Assets\Scripts\Magic\Magic.cs" />
+     <Compile Include="Assets\Scripts\Magic\ArtsAndSpells.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicBallController.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicalBallLifeTime.cs" />
      <Compile Include="Assets\Scripts\MagicBallHit.cs" />
