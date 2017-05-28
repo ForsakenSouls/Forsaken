@@ -16,4 +16,10 @@ public class mana_script : MonoBehaviour {
 	void Update () {
         mana_slider.value = (float)GameState.Player.mana / GameState.Player.MAX_MANA;
     }
+
+	void FixedUpdate()
+	{
+		if (GameState.Player.mana < GameState.Player.MAX_MANA)
+			GameState.Player.mana += GameState.manaPerTime / 2;
+	}
 }

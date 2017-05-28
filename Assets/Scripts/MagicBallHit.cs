@@ -6,7 +6,7 @@ public class MagicBallHit : MonoBehaviour {
 
 	// Use this for initialization
 	public int ballDamage;
-	float ManaCost;
+	int ManaCost;
 
 	MagicBallController myPC;
 	public GameObject explosion;

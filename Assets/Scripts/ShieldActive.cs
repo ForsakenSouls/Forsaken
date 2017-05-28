@@ -12,7 +12,6 @@ public class ShieldActive : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 		if (GameState.Invaluable)
 			Shield.SetActive (true);
 		else

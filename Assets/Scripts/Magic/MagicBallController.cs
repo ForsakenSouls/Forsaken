@@ -19,7 +19,7 @@ public class MagicBallController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		GameState.Player.mana -= 1;
 	}
 
 	// удаление шара

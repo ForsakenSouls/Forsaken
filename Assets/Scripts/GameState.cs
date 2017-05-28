@@ -6,6 +6,9 @@ using UnityEngine;
 /// </summary>
 public static class GameState {
     public static HeroClass Player0;
-    public static WizardClass Player = new WizardClass("Саня", false, races.орк, 54, 100, 99, 100, 32);
+	public static int ArtID = -1;
+    public static WizardClass Player = new WizardClass("Саня", false, races.орк, 54, 100, 990, 1000, 32);
 	public static bool Invaluable = false;
+	public static int manaPerTime = 2;
+	public static int manaPerFire = 200;
 }

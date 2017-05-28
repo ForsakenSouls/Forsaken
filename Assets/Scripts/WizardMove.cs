@@ -35,8 +35,9 @@ public class WizardMove : MonoBehaviour {
 
 	// Update is called once per second
 	void FixedUpdate () {
+
+
 		if (Input.GetKeyDown (KeyCode.Q)) {
-			
 			GameState.Invaluable = !GameState.Invaluable;
 		}
 		float move = Input.GetAxis ("Horizontal");		
@@ -50,13 +51,14 @@ public class WizardMove : MonoBehaviour {
 	}
 
 	void SaySpell(){
-		if (Time.time > nextFire) {
+		if (Time.time > nextFire && GameState.Player.mana > GameState.manaPerFire) {
 			nextFire = Time.time + spellRate;
 			if (facingRight) {
 				Instantiate (spell, staff.position, Quaternion.Euler (0, 0, 0));
 			} else if (!facingRight) {
 				Instantiate (spell, staff.position, Quaternion.Euler (0, 0, 180f));
 			}
+			GameState.Player.mana -= GameState.manaPerFire;
 		}
 
 	}
