@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 	int weap_amount = 0;
 	int pot_amount = 0;
 	private GUIStyle guistyle = new GUIStyle();
-	int[] arts = { 0, 0, 0, 0, 0, 0 }; //{stuff, teeth, healthpotion ,manapotion , , } 
+	int[] arts = { 0, 0, 0, 0, 0, 0,0 }; //{stuff, teeth, healthpotion ,manapotion , , } 
 	// Use this for initialization 
 	int weap_next = 0;
 	void Start()
@@ -80,14 +80,16 @@ public class Inventory : MonoBehaviour
 				for (int i = 0; i < list.Count; i++)
 					if (list [i].art_code == GameState.ArtID) 
 					{
-						if (arts [list [i].art_code] == 1)
-						{
+						//if (arts [list [i].art_code] == 1)
+						//{
 							list.Remove (list [i]);
 							weapon_equip ();
-						} 
-						else
-							arts [list [i].art_code]--;
-						break;
+                            break;
+
+                       // }
+                      //  else
+						//	arts [list [i].art_code]--;
+						//break;
 					}
 			}
 		}
