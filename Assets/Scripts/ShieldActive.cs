@@ -19,7 +19,12 @@ public class ShieldActive : MonoBehaviour {
 	}
 	void FixedUpdate()
 	{
-		if (GameState.Invaluable)
+		if (GameState.Invaluable) {
+			if (GameState.Player.mana <= 0) {
+				GameState.Invaluable = false;
+				return;
+			}
 			GameState.Player.mana -= GameState.manaPerTime;
+		}
 	}
 }

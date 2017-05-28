@@ -51,6 +51,8 @@ public class WizardMove : MonoBehaviour {
 	}
 
 	void SaySpell(){
+		if (GameState.Player.mana < GameState.manaPerFire)
+			return;
 		if (Time.time > nextFire && GameState.Player.mana > GameState.manaPerFire) {
 			nextFire = Time.time + spellRate;
 			if (facingRight) {
