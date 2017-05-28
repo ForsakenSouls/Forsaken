@@ -82,16 +82,19 @@ public class Inventory : MonoBehaviour
 				for (int i = 0; i < list.Count; i++)
 					if (list [i].art_code == GameState.ArtID) 
 					{
-						//if (arts [list [i].art_code] == 1)
-						//{
-							list.Remove (list [i]);
-							weapon_equip ();
+                        if (arts[list[i].art_code] == 1)
+                        {
+                            GameState.ArtID = -1;
+                            list.Remove(list[i]);
+                            weapon_equip();
                             break;
 
-                       // }
-                      //  else
-						//	arts [list [i].art_code]--;
-						//break;
+                        }
+                        else
+                        {
+                            arts[list[i].art_code]--;
+                            break;
+                        }
 					}
 			}
 		}
