@@ -64,18 +64,20 @@ public class Inventory : MonoBehaviour
 		{
 			weapon_equip();
 		}
-		if (Input.GetKeyUp(KeyCode.Q))
-		{
-			if (shield.GetComponent<Image>().sprite == Resources.Load<Sprite>("Equip/Shield"))
-				shield.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell");
-			else
-				shield.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/Shield");
+		if(GameState.Player.mana <=	 0) 
+			shield.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell"); 
+		if (Input.GetKeyUp(KeyCode.Q)) 
+		{ 
+			if (shield.GetComponent<Image>().sprite == Resources.Load<Sprite>("Equip/Shield") && !GameState.Invaluable) 
+				shield.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/EmptyCell"); 
+			else if(GameState.Player.mana > 0 && GameState.Invaluable) 
+				shield.GetComponent<Image>().sprite = Resources.Load<Sprite>("Equip/Shield"); 
 
-			shield.transform.SetParent(equip.transform.GetChild(2).transform, false);
-		}       
+			shield.transform.SetParent(equip.transform.GetChild(2).transform, false); 
+		}
 		if (Input.GetKeyUp (KeyCode.E))
 		{
-			if (GameState.ArtID > 3) 
+			if (GameState.ArtID >= 3) 
 			{
 				for (int i = 0; i < list.Count; i++)
 					if (list [i].art_code == GameState.ArtID) 

@@ -16,14 +16,14 @@ public class EnemyAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		charging = true;
-		enemyAnim.SetBool ("isCharging", charging);
-		enemyRB.AddForce (new Vector2 (-1, 0) * speed);
+		if (!GameState.paralyzed) {
+			charging = true;
+			enemyAnim.SetBool ("isCharging", charging);
+			enemyRB.AddForce (new Vector2 (-1, 0) * speed);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "Player") {
-		}
 	}
 }

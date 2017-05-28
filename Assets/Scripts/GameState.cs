@@ -11,4 +11,5 @@ public static class GameState {
 	public static bool Invaluable = false;
 	public static int manaPerTime = 2;
 	public static int manaPerFire = 200;
+	public static bool paralyzed = false;
 }

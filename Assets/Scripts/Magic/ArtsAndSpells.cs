@@ -17,7 +17,7 @@ public class ArtsAndSpells : MonoBehaviour {
 			{ 
 			case 5: { Health_Potion(); break; } 
 			case 4: { Mana_Potion(); break; } 
-				
+			case 3: { Eye_Potion (); break; }
 			} 
 		}
 	} 
@@ -32,5 +32,10 @@ public class ArtsAndSpells : MonoBehaviour {
 		GameState.Player.mana += 250; 
 		if (GameState.Player.mana > 1000) 
 			GameState.Player.health = 1000;	
+	}
+
+	void Eye_Potion()
+	{
+		GameState.paralyzed = true;
 	}
 }
