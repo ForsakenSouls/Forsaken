@@ -87,6 +87,19 @@ public class Inventory : MonoBehaviour
                             GameState.ArtID = -1;
                             list.Remove(list[i]);
                             weapon_equip();
+
+                            for (int j = 0; j < inventory.transform.childCount; j++)
+                            {
+                                if (inventory.transform.GetChild(j).transform.childCount > 0)
+                                {
+                                    Destroy(inventory.transform.GetChild(j).transform.GetChild(0).gameObject);
+                                }
+                            }
+                            if (inventory.activeSelf)
+                                inventory.SetActive(false);
+                            else
+                                inventory.SetActive(true);
+                            LayArts();
                             break;
 
                         }
