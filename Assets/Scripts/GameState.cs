@@ -5,7 +5,6 @@ using UnityEngine;
 /// статический класс, в котором будет храниться персонаж во время игры
 /// </summary>
 public static class GameState {
-    public static HeroClass Player0;
 	public static int ArtID = -1;
     public static WizardClass Player = new WizardClass("Саня", false, races.орк, 54, 100, 990, 1000, 32);
 	public static bool Invaluable = false;
