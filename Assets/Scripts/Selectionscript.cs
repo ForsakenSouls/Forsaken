@@ -53,7 +53,7 @@ public class Selectionscript : MonoBehaviour
             {
                 isName = Name.text;
                 isAge = Age.text;
-                GameState.Player = new WizardClass(isName, true, cur_race, 100, 100, 100, 100, Convert.ToInt32(isAge));
+                GameState.Player = new WizardClass(isName, true, cur_race, 100, 100, 10000, 10000, Convert.ToInt32(isAge));
                 SceneManager.LoadScene("changes");
             }
         }
