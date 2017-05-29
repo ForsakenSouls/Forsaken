@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\AntiPoisonSpell.cs" />
      <Compile Include="Assets\Scripts\Artifact.cs" />
      <Compile Include="Assets\Scripts\DecoctArt.cs" />
      <Compile Include="Assets\Scripts\EnemyState.cs" />
