@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\DecoctArt.cs" />
      <Compile Include="Assets\Scripts\EnemyState.cs" />
      <Compile Include="Assets\Scripts\EyeArt.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />

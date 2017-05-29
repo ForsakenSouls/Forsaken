@@ -60,7 +60,7 @@ public class Inventory : MonoBehaviour
 		}
 
 
-		if (Input.GetKeyUp(KeyCode.P)) //// экипировка оружия 
+		if (Input.GetKeyUp(KeyCode.R)) //// экипировка оружия 
 		{
 			weapon_equip();
 		}

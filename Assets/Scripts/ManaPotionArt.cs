@@ -15,6 +15,6 @@ public class ManaPotionArt : MonoBehaviour {
     {
         GameState.Player.mana += 250;
         if (GameState.Player.mana > 1000)
-            GameState.Player.health = 1000;
+            GameState.Player.mana = 1000;
     }
 }
