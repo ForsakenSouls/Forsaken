@@ -11,4 +11,5 @@ public static class GameState {
 	public static int manaPerTime = 2;
 	public static int manaPerFire = 200;
 	public static bool paralyzed = false;
+	public static bool damaged = false;
 }

@@ -15,27 +15,29 @@ public class enemyDamage : MonoBehaviour {
 		nextDamage = 0f;
 		delayTime = 1f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "Player" && !GameState.Invaluable) {
 			GameState.Player.health -= damage;
-            if (GameState.Player.health <= 10)
-            {
-                GameState.Player.state = states.ослаблен;
-            }
-        }
+			GameState.damaged = true;
+			if (GameState.Player.health <= 10)
+			{
+				GameState.Player.state = states.ослаблен;
+			}
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
 	{
 		if (other.tag == "Player" && nextDamage < Time.time && !GameState.Invaluable) {
 			nextDamage = Time.time + delayTime;
+			GameState.damaged = true;
 			GameState.Player.health -= damage;
 		}
 	}
