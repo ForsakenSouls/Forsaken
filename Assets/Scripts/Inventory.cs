@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 	int weap_amount = 0;
 	int pot_amount = 0;
 	private GUIStyle guistyle = new GUIStyle();
-	int[] arts = { 0, 0, 0, 0, 0, 0, 0, 0, 0 }; //{0, stuff, teeth, eye, manapotion ,healthpotion, decoct, healspell , } 
+	int[] arts = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; //{0, stuff, teeth, eye, manapotion ,healthpotion, decoct, healspell ,treatspell } 
 	// Use this for initialization 
 	int weap_next = 0;
 	void Start()

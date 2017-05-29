@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealSpell : MonoBehaviour {
+public class HealSpell : MonoBehaviour, Spell {
 
     int artID = 7;
+    int manacost = 300;
 	void Update () {
 		 if (Input.GetKeyDown(KeyCode.E) && GameState.ArtID == artID)
-                Spell();
+                Cast();
 	}
 
-    void Spell()
+    public void Cast()
     {
-        if (GameState.Player.mana >= 300)
+        if (GameState.Player.mana >= manacost)
         {
-            GameState.Player.mana -= 300;
+            GameState.Player.mana -= manacost;
             GameState.Player.health += 20;
             if (GameState.Player.health > 100)
                 GameState.Player.health = 100;

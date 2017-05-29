@@ -20,7 +20,7 @@ public class EnemyAttack : MonoBehaviour {
 			charging = true;
 			enemyAnim.SetBool ("isCharging", charging);
 			enemyRB.AddForce (new Vector2 (-1, 0) * speed);
-		}
+		}        
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Artifact.cs" />
      <Compile Include="Assets\Scripts\DecoctArt.cs" />
      <Compile Include="Assets\Scripts\EnemyState.cs" />
      <Compile Include="Assets\Scripts\EyeArt.cs" />
@@ -57,7 +58,6 @@
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\ItAmount.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
-     <Compile Include="Assets\Scripts\Magic\ArtsAndSpells.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicBallController.cs" />
      <Compile Include="Assets\Scripts\Magic\MagicalBallLifeTime.cs" />
      <Compile Include="Assets\Scripts\MagicBallHit.cs" />
@@ -65,6 +65,8 @@
      <Compile Include="Assets\Scripts\MenuButtons.cs" />
      <Compile Include="Assets\Scripts\Selectionscript.cs" />
      <Compile Include="Assets\Scripts\ShieldActive.cs" />
+     <Compile Include="Assets\Scripts\Spell.cs" />
+     <Compile Include="Assets\Scripts\TreatSpell.cs" />
      <Compile Include="Assets\Scripts\WizardClass.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
      <Compile Include="Assets\Scripts\enemyDamage.cs" />

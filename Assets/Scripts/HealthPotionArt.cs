@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPotionArt : MonoBehaviour {
+public class HealthPotionArt : MonoBehaviour, Artifact {
 
     int artID = 5;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && GameState.ArtID == artID)
-            Health_Potion();
+            UseArtifact();
 
     }
-    void Health_Potion()
+    public void UseArtifact()
     {
         GameState.Player.health += 25;
         if (GameState.Player.health > 100)

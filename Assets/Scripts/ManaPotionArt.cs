@@ -8,10 +8,10 @@ public class ManaPotionArt : MonoBehaviour {
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && GameState.ArtID == artID)
-           Mana_Potion();
+            UseArtifact();
 
     }
-    void Mana_Potion()
+    public void UseArtifact()
     {
         GameState.Player.mana += 250;
         if (GameState.Player.mana > 1000)

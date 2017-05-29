@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecoctArt :MonoBehaviour, Artifact {
+public class TreatSpell : MonoBehaviour {
 
-    int artID = 6;
-    
+    int artID = 8;
+    int manacost = 100;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && GameState.ArtID == artID)
-           UseArtifact();
-
+            Cast();
     }
-    public void UseArtifact()
+
+    public void Cast()
     {
-        if (GameState.Player.state == states.отравлен)
+        GameState.Player.mana -= manacost;
+        if (GameState.Player.state == states.ослаблен)
             GameState.Player.state = states.здоров;
     }
 }

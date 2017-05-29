@@ -25,7 +25,11 @@ public class enemyDamage : MonoBehaviour {
 	{
 		if (other.tag == "Player" && !GameState.Invaluable) {
 			GameState.Player.health -= damage;
-		}
+            if (GameState.Player.health <= 10)
+            {
+                GameState.Player.state = states.ослаблен;
+            }
+        }
 	}
 
 	void OnTriggerStay2D(Collider2D other)
