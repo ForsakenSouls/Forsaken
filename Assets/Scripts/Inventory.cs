@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 	int weap_amount = 0;
 	int pot_amount = 0;
 	private GUIStyle guistyle = new GUIStyle();
-	int[] arts = { 0, 0, 0, 0, 0, 0,0 }; //{stuff, teeth, healthpotion ,manapotion , , } 
+	int[] arts = { 0, 0, 0, 0, 0, 0, 0, 0, 0 }; //{0, stuff, teeth, eye, manapotion ,healthpotion, decoct, healspell , } 
 	// Use this for initialization 
 	int weap_next = 0;
 	void Start()
@@ -77,7 +77,7 @@ public class Inventory : MonoBehaviour
 		}
 		if (Input.GetKeyUp (KeyCode.E))
 		{
-			if (GameState.ArtID >= 3) 
+			if (GameState.ArtID >= 3 && GameState.ArtID < 7) 
 			{
 				for (int i = 0; i < list.Count; i++)
 					if (list [i].art_code == GameState.ArtID) 
@@ -117,7 +117,7 @@ public class Inventory : MonoBehaviour
 	public void remove(Item it, GameObject obj)
 	{
 		GameObject newo = Instantiate<GameObject>(Resources.Load<GameObject>(it.prefab));
-		newo.transform.position = transform.position - 3 * transform.right;
+        if (it.art_code <= 6) newo.transform.position = transform.position - 3 * transform.right;
 		if (arts[it.art_code] == 1)
 		{
 			Destroy(obj);

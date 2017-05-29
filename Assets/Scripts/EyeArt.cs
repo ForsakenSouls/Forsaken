@@ -8,8 +8,8 @@ public class EyeArt : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.E) && GameState.ArtID == artID)
             Eye_Potion();        
-
     }
+
     void Eye_Potion()
     {
         GameState.paralyzed = true;
