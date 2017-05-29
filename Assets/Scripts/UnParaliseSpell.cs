@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreatSpell : MonoBehaviour, Spell {
-
-    int artID = 8;
-    int manacost = 100;
+public class UnParaliseSpell : MonoBehaviour, Spell {
+    int artID = 10;
+    int manacost = 150;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && GameState.ArtID == artID)
@@ -15,7 +14,7 @@ public class TreatSpell : MonoBehaviour, Spell {
     public void Cast()
     {
         GameState.Player.mana -= manacost;
-        if (GameState.Player.state == states.ослаблен)
+        if (GameState.Player.state == states.парализован)
             GameState.Player.state = states.здоров;
     }
 }

@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\ShieldActive.cs" />
      <Compile Include="Assets\Scripts\Spell.cs" />
      <Compile Include="Assets\Scripts\TreatSpell.cs" />
+     <Compile Include="Assets\Scripts\UnParaliseSpell.cs" />
      <Compile Include="Assets\Scripts\WizardClass.cs" />
      <Compile Include="Assets\Scripts\WizardMove.cs" />
      <Compile Include="Assets\Scripts\enemyDamage.cs" />
