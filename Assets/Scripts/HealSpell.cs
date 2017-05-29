@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealSpell : MonoBehaviour, Spell {
-
+    public AudioClip aud;
     int artID = 7;
     int manacost = 300;
 	void Update () {
@@ -15,6 +15,8 @@ public class HealSpell : MonoBehaviour, Spell {
     {
         if (GameState.Player.mana >= manacost)
         {
+            GetComponent<AudioSource>().clip = aud;
+            GetComponent<AudioSource>().Play();
             GameState.Player.mana -= manacost;
             GameState.Player.health += 20;
             if (GameState.Player.health > 100)
