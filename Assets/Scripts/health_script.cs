@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class health_script : MonoBehaviour {
 
     public Slider health_slider;
@@ -16,6 +18,8 @@ public class health_script : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		health_slider.value = (float)GameState.Player.health / GameState.Player.MAX_HEALTH;
+        if (GameState.Player.health <= 0)
+            SceneManager.LoadScene("MenuScene");
     }
 
 	public void addDamage(int damage) {

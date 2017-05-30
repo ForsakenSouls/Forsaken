@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\MagicBallHit.cs" />
     <Compile Include="Assets\Scripts\ManaPotionArt.cs" />
     <Compile Include="Assets\Scripts\MenuButtons.cs" />
+    <Compile Include="Assets\Scripts\QuitController.cs" />
     <Compile Include="Assets\Scripts\Selectionscript.cs" />
     <Compile Include="Assets\Scripts\ShieldActive.cs" />
     <Compile Include="Assets\Scripts\Spell.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Assets\Scripts\enums.cs" />
     <Compile Include="Assets\Scripts\health_script.cs" />
     <Compile Include="Assets\Scripts\mana_script.cs" />
+    <Compile Include="Assets\Scripts\muz.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

@@ -19,4 +19,8 @@ public class WizardClass : HeroClass {
         abil_to_move = true;
         age = _age;
     }
+    public override string ToString()
+    {
+        return (base.ToString() + "\nмана - " + mana);
+    }
 }

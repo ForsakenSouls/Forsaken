@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroClass : ScriptableObject, IComparable
+public class HeroClass : IComparable
 {
     protected static int main_ID { get; set; }
     protected int ID { get; set; }
@@ -55,7 +55,7 @@ public class HeroClass : ScriptableObject, IComparable
     }
     public override string ToString()
     {
-        return string.Format("ID персонажа - {0},\nИмя персонажа - {1},\nпол - {2},\nраса - {3},\nтекущее состояние - {4},\nвозможность двигаться - {5},\nвозможность разговаривать - {6},\nвозраст - {7},\nздоровье - {8},\nопыт - {9}", ID, Name, (gender)?"Мужской":"Женский", race, state, (abil_to_move)?"да":"нет", (abil_to_speak)?"да":"нет", age, health, EXP);
+        return string.Format("ID персонажа - {0},\nИмя персонажа - {1},\nпол - {2},\nраса - {3},\nтекущее состояние - {4},\nвозможность двигаться - {5},\nвозможность разговаривать - {6},\nвозраст - {7},\nопыт - {9},\nздоровье - {8}", ID, Name, (gender)?"Мужской":"Женский", race, state, (abil_to_move)?"да":"нет", (abil_to_speak)?"да":"нет", age, health, EXP);
     }
     void Refresh()
     {

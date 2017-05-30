@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthPotionArt : MonoBehaviour, Artifact {
-
+    public AudioClip aud;
     int artID = 5;
     void Update()
     {
@@ -13,6 +13,8 @@ public class HealthPotionArt : MonoBehaviour, Artifact {
     }
     public void UseArtifact()
     {
+        GetComponent<AudioSource>().clip = aud;
+        GetComponent<AudioSource>().Play();
         GameState.Player.health += 25;
         if (GameState.Player.health > 100)
             GameState.Player.health = 100;

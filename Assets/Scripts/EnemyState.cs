@@ -29,5 +29,6 @@ public class EnemyState : MonoBehaviour {
 	{
 		Instantiate (explosion, transform.position, transform.rotation);
 		Destroy (gameObject);
+        GameState.Player.EXP += 100;
 	}
 }

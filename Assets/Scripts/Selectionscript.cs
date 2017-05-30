@@ -3,8 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
-using UnityEditor;
-
+//using UnityEditor;
 
 public class Selectionscript : MonoBehaviour
 {
@@ -49,17 +48,17 @@ public class Selectionscript : MonoBehaviour
         ActiveToggle();
         if (Name.text != "" & Age.text != "" & Age.text != "0")
         {
-            if (Convert.ToInt32(Age.text) > 0)
+            if (Convert.ToInt32(Age.text) > 0 && Convert.ToInt32(Age.text) < 200000)
             {
                 isName = Name.text;
                 isAge = Age.text;
-                GameState.Player = new WizardClass(isName, true, cur_race, 100, 100, 10000, 10000, Convert.ToInt32(isAge));
+                GameState.Player = new WizardClass(isName, true, cur_race, 100, 100, 1000, 1000, Convert.ToInt32(isAge));
                 SceneManager.LoadScene("changes");
             }
         }
         else
         {
-            EditorUtility.DisplayDialog("Ошибка!", "Незаполненные поля!", "Еще раз");
+            //EditorUtility.DisplayDialog("Ошибка!", "Незаполненные поля!", "Еще раз");
         }
     }
 

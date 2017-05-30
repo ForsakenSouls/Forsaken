@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
 		if (info.activeSelf)
 		{
 			guistyle.fontSize = 16;
-			GUI.Label(new Rect(530, 53, 150, 200), GameState.Player.ToString() +"Art: " + GameState.ArtID.ToString(), guistyle);
+			GUI.Label(new Rect(790, 175, 150, 200), GameState.Player.ToString(), guistyle);
 		}
 
 	}
