@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class health_script : MonoBehaviour {
 
 	public Slider health_slider;
@@ -17,15 +18,23 @@ public class health_script : MonoBehaviour {
 		playerMovement = GetComponent<WizardMove> ();
 	}
 
-	// Update is called once per frame
-	void Update () {
-		health_slider.value = (float)GameState.Player.health / GameState.Player.MAX_HEALTH;
-		if (GameState.damaged) {
-			damageScreen.color = damagedColor;
-		} else {
-			damageScreen.color = Color.Lerp (damageScreen.color, Color.clear, averageColor * Time.deltaTime);
-		}
-		GameState.damaged = false;
+    // Update is called once per frame
+    void Update()
+    {
+        health_slider.value = (float)GameState.Player.health / GameState.Player.MAX_HEALTH;
+        if (GameState.damaged)
+        {
+            damageScreen.color = damagedColor;
+        }
+        else
+        {
+            damageScreen.color = Color.Lerp(damageScreen.color, Color.clear, averageColor * Time.deltaTime);
+        }
+        GameState.damaged = false;
+        if (GameState.Player.health <= 0)
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
 	}
 
 	public void addDamage(int damage) {

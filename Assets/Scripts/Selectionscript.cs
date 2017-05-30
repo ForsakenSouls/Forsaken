@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
-using UnityEditor;
 
 
 public class Selectionscript : MonoBehaviour
@@ -59,7 +58,7 @@ public class Selectionscript : MonoBehaviour
         }
         else
         {
-            EditorUtility.DisplayDialog("Ошибка!", "Незаполненные поля!", "Еще раз");
+            //EditorUtility.DisplayDialog("Ошибка!", "Незаполненные поля!", "Еще раз");
         }
     }
 
